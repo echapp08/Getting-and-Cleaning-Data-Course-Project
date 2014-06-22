@@ -1,0 +1,48 @@
+Code Book - UCI Human Activity Recognition Data Set
+
+This data is extracted and simplified from the original data set found here: 
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+with 561 variables for each observation of a subject and activity.  
+
+The 561 variables, and the methods used to achieve them, are described in the features.txt and features_info.txt files included in the zipped data file.   
+
+The reduced data set includes 69 variables:
+
+1: subject_id
+		1-30	Unique subject identifier
+2: activity_id
+		Id number 1-6, corresponding to the following physical activities
+		1   Walking
+		2	Walking up stairs
+		3   Walking down stairs
+		4	Sitting
+		5   Standing
+		6   Laying
+3-68: extracted data
+		Variables are of the form aaaa_bbbb_ccc_dddd_eeee_f
+		describing the type of measurement taken, where
+		aaaa: 	time
+				freq 	(frequency)
+		bbbb:	body
+				grav 	(gravity)
+		cccc: 	acc 	(accelerometer)
+				gyr 	(gyroscopic)
+		dddd:	jerk
+				mag     (magnitude)
+				jerk_mag (jerk magnitude)
+		eeee: 	mean
+				stdv  	(standard deviation)
+		f: 		x       (x-axis)
+				y       (y-axis)
+				z       (z-axis)
+		aaaa, bbbb, cccc, and eeee are always present; dddd and f may or may not be.
+69: activity_name
+		Activities as defined by their id number in activity_id
+		Walking
+		Walking up stairs
+		Walking down stairs
+		Sitting
+		Standing
+		Laying
+
+When choosing new variable names, every attempt was made to adhere to Hadley Wickham's style guidelines (http://adv-r.had.co.nz/Style.html).  
